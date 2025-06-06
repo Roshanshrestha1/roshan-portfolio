@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roshan Shrestha | Portfolio</title>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      border-bottom: 1px solid #222;
+    }
+    header .logo {
+      color: #a78bfa;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #a78bfa;
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #a78bfa;
+      margin-bottom: 1rem;
+    }
+    .projects, .skills {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .projects {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .project-card {
+      background: #18181b;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: #fff;
+    }
+    .project-card a {
+      color: #a78bfa;
+      text-decoration: underline;
+    }
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      text-align: center;
+    }
+    .skill {
+      background: #18181b;
+      border-radius: 8px;
+      padding: 1rem 0;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #222;
+    }
+    .about, .contact {
+      background: #18181b;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 2rem;
+      border: 1px solid #222;
+    }
+    .contact a {
+      color: #a78bfa;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 2rem 1rem 1rem 1rem;
+      font-size: 0.95rem;
+      border-top: 1px solid #222;
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      header, section {
+        padding: 1rem;
+      }
+      nav a {
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Roshan Shrestha</div>
+    <nav>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Hi, I'm Roshan Shrestha</h1>
+    <p style="font-size:1.2rem; color:#ccc;">Web Designer &amp; Front-end Developer</p>
+    <p style="color:#aaa; max-width:500px;">I'm currently into DSA, Frontend Dev, Backend Dev. I love building modern, user-friendly web experiences.</p>
+  </section>
+
+  <section id="projects">
+    <h2>#projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Short description of project 1.</p>
+        <a href="#">Live</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Short description of project 2.</p>
+        <a href="#">Live</a>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Short description of project 3.</p>
+        <a href="#">Live</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>#skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">ReactJS</div>
+      <div class="skill">NodeJS</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Git</div>
+      <div class="skill">Figma</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>#about-me</h2>
+    <div class="about">
+      <p>Hello, I'm Roshan Shrestha!</p>
+      <p>I'm a self-taught front-end developer. I can develop responsive websites from scratch and turn them into modern, user-friendly web experiences.</p>
+      <p>I'm passionate about improving my coding skills and building applications & websites. I always strive to learn about the newest technologies and frameworks.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>#contacts</h2>
+    <div class="contact">
+      <p>I'm interested in freelance opportunities. If you have a request or question, don't hesitate to contact me.</p>
+      <div>Email: <a href="mailto:roshanshrestha9821533789@gmail.com">roshanshrestha9821533789@gmail.com</a></div>
+      <div>GitHub: <a href="https://github.com/Roshanshrestha1">github.com/Roshanshrestha1</a></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Roshan Shrestha. Made with ❤️ in pure HTML, CSS &amp; JS.
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 60,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
